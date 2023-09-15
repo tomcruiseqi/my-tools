@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+session_cache="$HOME/.cache/.vpncache"
+
+vpnpath=`awk 'NR==1 {print $NF}' $session_cache`
+openvpn3 session-manage --session-path $vpnpath --disconnect
+if [[ $? -eq 0 ]]
+then
+    if [[ -f $session_cache ]]
+    then
+        rm $session_cache
+    fi
+
+    echo "disconnection success."
+else
+    echo "disconnection failed, please try again."
+fi

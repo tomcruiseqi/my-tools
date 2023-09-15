@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+session_cache="$HOME/.cache/.vpncache"
+
+# If the file exists, disconnect first.
+if [[ -f "$session_cache" ]]
+then
+    nonfree
+fi
+
+openvpn3 session-start --config-path /net/openvpn/v3/configuration/af21a6fdx54fex4c0exbc45xaf309a960b6e 1> $session_cache
+if [[ $? -ne 0 ]]
+then
+    if [[ -f $session_cache ]]
+    then
+        rm $session_cache
+    fi
+
+    echo "connection failed, please try again."
+else
+    echo "connection success."
+fi
