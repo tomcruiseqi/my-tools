@@ -1,0 +1,2 @@
+# OpenVPN 3 Linux client - Ubuntu 22.04 LTS
+deb [arch=amd64] https://swupdate.openvpn.net/community/openvpn3/repos jammy main
