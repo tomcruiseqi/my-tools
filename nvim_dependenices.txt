@@ -1,0 +1,7 @@
+python -m pip install pip --upgrade
+pip install -U pynvim
+pip install 'python-lsp-server[all]' pylsp-mypy pyls-isort
+
+# install node.
+# after that, run the following command.
+npm install -g vim-language-server
