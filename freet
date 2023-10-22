@@ -8,7 +8,7 @@ then
     nonfree
 fi
 
-openvpn3 session-start --config-path /net/openvpn/v3/configuration/af21a6fdx54fex4c0exbc45xaf309a960b6e 1> $session_cache
+openvpn3 session-start --config-path /net/openvpn/v3/configuration/c8fe475dx8e1ex434bxab96xa7207cc0c1d9 1> $session_cache
 if [[ $? -ne 0 ]]
 then
     if [[ -f $session_cache ]]

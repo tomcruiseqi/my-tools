@@ -5,3 +5,7 @@ pip install 'python-lsp-server[all]' pylsp-mypy pyls-isort
 # install node.
 # after that, run the following command.
 npm install -g vim-language-server
+
+git clone --depth=1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
+
+git clone https://github.com/tomcruiseqi/nvim-config.git ~/.config/nvim
